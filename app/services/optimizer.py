@@ -180,14 +180,14 @@ class BudgetKnapsackOptimizer:
         else:
             prob = pulp.LpProblem("SAAML_Budget_Optimization", pulp.LpMaximize)
 
-            # Variables de decisión
+            # Variables de decisión (Definición con parámetros posicionales compatibles)
             # y[i]: binaria (1 si se emite orden para el SKU i, 0 si no)
             # k[i]: entera (número de lotes a comprar)
             y = {}
             k = {}
             for idx, c in enumerate(candidates):
-                y[idx] = pulp.LpVariable(f"y_{idx}", cat=pulp.LpBinary)
-                k[idx] = pulp.LpVariable(f"k_{idx}", lowBound=0, upBound=c["max_lotes"], cat=pulp.LpInteger)
+                y[idx] = pulp.LpVariable(f"y_{idx}", 0, 1, pulp.LpBinary)
+                k[idx] = pulp.LpVariable(f"k_{idx}", 0, c["max_lotes"], pulp.LpInteger)
 
             # Restricciones:
             # 1. Vinculación lógica y MOQ
