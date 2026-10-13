@@ -1,0 +1,25 @@
+# Entorno virtual
+.venv/
+venv/
+ENV/
+
+# Secretos y variables de entorno (RNF-SEG)
+.env
+.env.local
+*.pem
+*.key
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store

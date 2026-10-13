@@ -1,0 +1,29 @@
+# FastAPI & Servidor ASGI
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+pydantic-settings>=2.2.1
+pydantic[email]>=2.7.0
+
+# Base de Datos MongoDB Asíncrona
+motor>=3.4.0
+pymongo>=4.6.3
+
+# Seguridad y Autenticación (RNF-SEG)
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.1.2
+python-multipart>=0.0.9
+
+# Optimización y Análisis Matemático (RF04 - Knapsack)
+pulp>=2.8.0
+numpy>=1.26.4
+pandas>=2.2.2
+scipy>=1.13.0
+scikit-learn>=1.4.2
+joblib>=1.3.0
+
+# Utilidades y Testing
+python-dotenv>=1.0.1
+httpx>=0.27.0
+pytest>=8.1.1
