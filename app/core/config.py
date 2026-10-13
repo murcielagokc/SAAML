@@ -1,5 +1,5 @@
 import json
-from typing import List, Union
+from typing import List, Optional, Union
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -23,6 +23,11 @@ class Settings(BaseSettings):
 
     # Restricciones y Rendimiento (RNF01)
     MAX_OPTIMIZATION_SECONDS: int = 30
+
+    # Keep-Alive Anti-Sleep (Ping automático para evitar que Render se duerma)
+    ENABLE_KEEP_ALIVE: bool = True
+    KEEP_ALIVE_INTERVAL_MINUTES: int = 5
+    RENDER_EXTERNAL_URL: Optional[str] = None
 
     # CORS
     CORS_ORIGINS: Union[List[str], str] = ["*"]
