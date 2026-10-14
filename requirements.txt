@@ -16,7 +16,7 @@ bcrypt>=4.1.2
 python-multipart>=0.0.9
 
 # Optimización y Análisis Matemático (RF04 - Knapsack)
-pulp>=2.8.0
+PuLP==2.9.0
 numpy>=1.26.4
 pandas>=2.2.2
 scipy>=1.13.0
